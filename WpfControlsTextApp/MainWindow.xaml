@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfControlsTextApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlsTextApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Width="300">
+        <TextBlock TextWrapping="Wrap" x:Name="txtBlock">
+            <Run Foreground="Red" FontSize="24">T</Run>
+            <Run>ext text text</Run>
+        </TextBlock>
+        <TextBox Height="100"
+                 TextWrapping="Wrap"
+                 TextAlignment="Left"
+                 TextDecorations="Baseline"
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 HorizontalScrollBarVisibility="Visible"
+                 VerticalScrollBarVisibility="Visible"
+                 FontSize="30">
+        </TextBox>
+        <Label Target="{Binding ElementName=txtLogin}">_Login</Label>
+        <TextBox x:Name="txtLogin"></TextBox>
+        <Label Target="{Binding ElementName=txtPassword}">_Password</Label>
+        <PasswordBox x:Name="txtPassword"
+                     PasswordChar="*"></PasswordBox>
+        <RichTextBox>
+            
+        </RichTextBox>
+    </StackPanel>
+</Window>
